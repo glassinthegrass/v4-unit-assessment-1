@@ -80,7 +80,7 @@ let add = {
 //CODE HERE
 let commit = {
     description: 'commit or save the changes to git',
-    code: 'git commit'
+    code: 'git commit -m'
 }
 //////////////////PROBLEM 8////////////////////
 /*
@@ -91,7 +91,7 @@ let commit = {
 //CODE HERE
 let addRemote = {
     description: 'add and manage a remote repository at the specified url',
-    code: 'git remote add *url*'
+    code: 'git remote add origin'
 }
 //////////////////PROBLEM 9////////////////////
 /*

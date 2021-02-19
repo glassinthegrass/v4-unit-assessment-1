@@ -34,15 +34,13 @@ function sum(num1, num2) {
 
 //CODE HERE
 function trueOrFalse(data) {
-  if( data === true) {
+  if(data) {
     return true
   } else {
-    ans = false
-    return ans
+    return false
   }
 }
-console.log(data)
-//////////////////PROBLEM 6////////////////////
+  //////////////////PROBLEM 6////////////////////
 /*
   Create a function called 'oddChecker' that takes in one parameter, 'num'. 
   Your function should check to see if the parameter is even or odd. 
@@ -112,7 +110,9 @@ let me = {
   firstName: 'Jared',
   state: 'Arizona',
   age: 32,
-  greeter: `Hello! my name is ${firstName} and I live in ${state}` 
+  greeter: function() {
+    `Hello! my name is ${this.firstName} and I live in ${this.state}` 
+  }
 }
 //////////////////PROBLEM 12////////////////////
 /* 
@@ -181,7 +181,7 @@ function secondFunction() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ['global', 'functional']
+let globalScope = ['global']
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
 let firstFunctionScope = ['global', 'outer']
@@ -214,7 +214,7 @@ function firstItem(arr,cb) {
 
 //CODE HERE
 function isItBob(obj,cb) {
-  if(obj === 'Bob') {
+  if(obj.name === 'Bob') {
     return cb(true)
   } else {
     return cb(false)
@@ -229,10 +229,11 @@ function isItBob(obj,cb) {
 
 //CODE HERE
 function giveMeDoubles(arr,cb) {
+let d = []
   for(let i = 0; i < arr.length; i++) {
-arr[i]*2
+d.push(arr[i]*2)
   }
-  return arr
+  return cb(d)
 }
 //////////////////PROBLEM 18////////////////////
 /*
